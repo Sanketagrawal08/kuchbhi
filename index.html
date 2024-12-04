@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Player</title>
+  <style>
+    /* Add your styling here */
+    .audio-player {
+      width: 300px;
+      margin: 50px auto;
+      text-align: center;
+    }
+     
+    .controls {
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #f1f1f1;
+      margin: 5px;
+      border-radius: 5px;
+      text-align: left;
+    }
+
+    li:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- List of Songs -->
+  <div>
+    <h2>Song List</h2>
+    <ul id="song-list"></ul>
+  </div>
+
+  <!-- Audio Player -->
+  <div class="audio-player">
+    <audio id="audio" preload="auto">
+      <source id="audio-source" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+
+    <div class="controls">
+      <button id="play-pause">Play</button>
+      <button id="stop">Stop</button>
+      <input type="range" id="progress-bar" value="0" step="1" min="0">
+      <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+    </div>
+  </div>
+
+  <script src="tr.js"></script>
+</body>
+</html>
